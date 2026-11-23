@@ -225,3 +225,37 @@ input,select,textarea{background:rgba(15,14,28,.8)}
 #lbp{left:max(12px,env(safe-area-inset-left,0px))} #lbn{right:max(12px,env(safe-area-inset-right,0px))}
 dialog::backdrop{background:radial-gradient(circle at 50% 40%,rgba(30,20,60,.92),rgba(5,5,10,.97))}
 @media (max-width:520px){.trio{grid-template-columns:minmax(0,1fr)}.hero-cap{margin-top:-6vh}}
+
+/* ===== v3: clearer type, seamless hero ===== */
+:root{
+  --wall:#14152a;
+  --plinth:#1b1c34;
+  --f-display:"Space Grotesk", "Inter", system-ui, sans-serif;
+  --f-body:"Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"Space Grotesk", "Inter", system-ui, sans-serif;
+}
+body{font-size:16px;line-height:1.7;background:
+  radial-gradient(1100px 600px at 90% 8%, rgba(255,90,217,.10), transparent 60%),
+  radial-gradient(900px 700px at -5% 35%, rgba(94,228,255,.07), transparent 60%),
+  var(--wall)}
+h1,h2,h3{letter-spacing:-.01em;font-weight:600}
+h2{font-size:clamp(30px,4vw,46px)}
+h3{font-size:20px}
+.mark{font-weight:700;letter-spacing:.01em}
+.mark i{font-family:var(--f-body);text-transform:none;letter-spacing:0;font-size:14px}
+.eyebrow{font-weight:600;letter-spacing:.16em;font-size:12px;text-shadow:none}
+.hero-cap h1{font-weight:600;letter-spacing:-.02em;line-height:1.02}
+.hero-cap h1 em{background:none;-webkit-background-clip:initial;background-clip:initial;color:var(--brass)}
+.hero-cap p,.scene-txt p,.offer p,.steps span,.about .body p{font-size:16px;color:#b4b9d6}
+.btn{font-family:var(--f-body);font-weight:600;letter-spacing:.06em}
+.btn:hover{background:var(--brass);color:#0b0b18}
+.work h3{font-size:17px}
+.work .cat,.specs dt,.filters button,label,.count{font-family:var(--f-body);font-weight:500;letter-spacing:.1em}
+/* hero melts into the page on every edge */
+.hero{background:var(--wall)}
+.hero img{-webkit-mask-image:radial-gradient(ellipse 56% 74% at 50% 46%,#000 50%,transparent 100%);mask-image:radial-gradient(ellipse 56% 74% at 50% 46%,#000 50%,transparent 100%);max-height:90vh}
+.hero::after{content:"";position:absolute;inset:auto 0 0;height:30%;background:linear-gradient(transparent,var(--wall));pointer-events:none}
+.hero-cap{z-index:2}
+.creds{background:transparent;border-color:var(--line)}
+#figures .grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:900px){#figures .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
