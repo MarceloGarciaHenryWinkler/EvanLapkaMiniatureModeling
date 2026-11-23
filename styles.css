@@ -268,3 +268,5 @@ body > dialog#lb[open]{display:flex;flex-direction:column;align-items:center;jus
 #lbp,#lbn{right:auto;z-index:2}
 #lbn{right:max(12px,env(safe-area-inset-right,0px));left:auto}
 @media (max-width:640px){body > dialog#lb{padding:56px 8px 16px}.lbnav{width:36px;height:52px;font-size:22px}}
+.teach-photo{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;margin:0 0 40px}
+.teach-photo img{display:block;width:100%;height:min(44vw,480px)!important;aspect-ratio:auto;object-fit:cover;object-position:50% 62%;-webkit-mask-image:linear-gradient(#000 75%,transparent);mask-image:linear-gradient(#000 75%,transparent)}
