@@ -288,6 +288,6 @@ body > dialog#lb[open]{display:flex;flex-direction:column;align-items:center;jus
 @media (min-width:641px){
 .hero img,.battle-img img{width:80%;margin-inline:auto;max-height:72vh;--fx:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);--fy:linear-gradient(transparent,#000 12%,#000 78%,transparent);-webkit-mask-image:var(--fx),var(--fy);-webkit-mask-composite:source-in;mask-image:var(--fx),var(--fy);mask-composite:intersect}
 .hero-cap{margin-top:-9vh}
-.hero img{width:51%;max-height:46vh}
+.hero img{width:62%;max-height:none;height:auto;aspect-ratio:auto;object-fit:contain;--fx:linear-gradient(90deg,transparent,rgba(0,0,0,.12) 1.5%,rgba(0,0,0,.4) 4%,rgba(0,0,0,.72) 7.5%,rgba(0,0,0,.92) 11%,#000 14%,#000 86%,rgba(0,0,0,.92) 89%,rgba(0,0,0,.72) 92.5%,rgba(0,0,0,.4) 96%,rgba(0,0,0,.12) 98.5%,transparent);--fy:linear-gradient(transparent,rgba(0,0,0,.5) 6%,#000 16%,#000 72%,rgba(0,0,0,.6) 86%,transparent)}
 .hero-cap{margin-top:-2vh}
 }
