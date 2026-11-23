@@ -277,3 +277,8 @@ body > dialog#lb[open]{display:flex;flex-direction:column;align-items:center;jus
 .battle-cap{position:absolute;left:0;right:0;bottom:6%;pointer-events:none}
 .battle-cap h2{text-shadow:0 4px 30px rgba(0,0,0,.85)}
 @media (max-width:640px){.battle-img img{aspect-ratio:4/3}.battle-cap{position:static;margin-top:8px}}
+.teach-pair{display:grid;grid-template-columns:1.6fr 1fr;gap:16px;margin:0 0 40px}
+.teach-pair .teach-photo{margin:0}
+.teach-pair .teach-photo img{height:min(40vw,440px)!important}
+.teach-pair .teach-photo:last-child img{object-position:50% 50%}
+@media(max-width:700px){.teach-pair{grid-template-columns:1fr}.teach-pair .teach-photo img{height:min(70vw,380px)!important}}
