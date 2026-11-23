@@ -149,7 +149,7 @@ dialog button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right
 .scene:nth-child(even){grid-template-columns:minmax(0,1fr) minmax(0,2fr)}
 .scene:nth-child(even) .scene-img{order:2}
 .scene-img{padding:0;border:0;background:var(--plinth);cursor:zoom-in;overflow:hidden;display:block;width:100%}
-.scene-img img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;transition:transform .8s ease}
+.scene-img img{display:block;width:100%;height:auto;max-height:78vh;object-fit:contain;transition:transform .8s ease}
 .scene-img:hover img{transform:scale(1.025)}
 .scene-txt{display:grid;gap:12px;padding-bottom:6px}
 .scene-txt p{color:var(--dim)}
