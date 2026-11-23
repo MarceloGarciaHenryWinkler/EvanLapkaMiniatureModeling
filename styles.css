@@ -270,3 +270,10 @@ body > dialog#lb[open]{display:flex;flex-direction:column;align-items:center;jus
 @media (max-width:640px){body > dialog#lb{padding:56px 8px 16px}.lbnav{width:36px;height:52px;font-size:22px}}
 .teach-photo{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;margin:0 0 40px}
 .teach-photo img{display:block;width:100%;height:min(44vw,480px)!important;aspect-ratio:auto;object-fit:cover;object-position:50% 62%;-webkit-mask-image:linear-gradient(#000 75%,transparent);mask-image:linear-gradient(#000 75%,transparent)}
+/* full-bleed battle banner (ork horde) */
+.battle{position:relative;padding:0;margin:24px 0 8px}
+.battle-img{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.battle-img img{display:block;width:100%;aspect-ratio:2/1;object-fit:cover;max-height:92vh;-webkit-mask-image:radial-gradient(ellipse 60% 78% at 50% 48%,#000 52%,transparent 100%);mask-image:radial-gradient(ellipse 60% 78% at 50% 48%,#000 52%,transparent 100%)}
+.battle-cap{position:absolute;left:0;right:0;bottom:6%;pointer-events:none}
+.battle-cap h2{text-shadow:0 4px 30px rgba(0,0,0,.85)}
+@media (max-width:640px){.battle-img img{aspect-ratio:4/3}.battle-cap{position:static;margin-top:8px}}
