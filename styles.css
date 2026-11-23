@@ -259,3 +259,12 @@ h3{font-size:20px}
 .creds{background:transparent;border-color:var(--line)}
 #figures .grid{grid-template-columns:repeat(4,minmax(0,1fr))}
 @media (max-width:900px){#figures .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* lightbox: pinned full-screen layer (body > * rule was making it position:relative, so it opened off-screen) */
+body > dialog#lb{position:fixed;inset:0;z-index:1000;margin:0;width:100%;height:100%;max-width:none;max-height:none;padding:56px 72px 20px;box-sizing:border-box;background:rgba(5,5,10,.96);overflow:hidden}
+body > dialog#lb[open]{display:flex;flex-direction:column;align-items:center;justify-content:center}
+#lb img{max-width:100%;max-height:calc(100% - 44px);width:auto;height:auto;object-fit:contain;margin:0}
+#lb p{flex:none}
+#lbx{z-index:2}
+#lbp,#lbn{right:auto;z-index:2}
+#lbn{right:max(12px,env(safe-area-inset-right,0px));left:auto}
+@media (max-width:640px){body > dialog#lb{padding:56px 8px 16px}.lbnav{width:36px;height:52px;font-size:22px}}
