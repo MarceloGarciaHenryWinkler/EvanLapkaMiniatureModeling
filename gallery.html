@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gallery | ATXminis</title>
+<meta name="description" content="ATXminis: Evan Lapka Miniature Modeling. Display dioramas, large-scale terrain and display figures by commission, plus classes and virtual coaching. Denver, Colorado.">
+<meta property="og:title" content="ATXminis | Evan Lapka Miniature Modeling">
+<meta property="og:description" content="ATXminis: Evan Lapka Miniature Modeling. Display dioramas, large-scale terrain and display figures by commission, plus classes and virtual coaching. Denver, Colorado.">
+<meta property="og:image" content="https://atxminis.com/img/hero.jpg">
+<meta property="og:type" content="website">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>body{margin:0} img{max-width:100%} [hidden]{display:none!important}</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="mark" href="index.html">ATXminis <i>Evan Lapka Miniature Modeling</i></a>
+    <ul>
+      <li><a href="index.html#scenes">Dioramas</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="index.html#commissions">Commissions</a></li>
+      <li><a href="index.html#teaching">Classes &amp; coaching</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a class="cta" href="index.html#inquire">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="wrap page-head">
+  <span class="eyebrow">Gallery</span>
+  <h1>The full collection</h1>
+  <p>Dioramas, display terrain and figures from the studio. Click any piece to see it larger.</p>
+</div>
+
+<section style="padding-top:40px"><div class="wrap">
+  <div class="sec-head" style="margin-bottom:28px"><div></div>
+    <div class="filters" role="group" aria-label="Filter work">
+      <button type="button" data-f="all" aria-pressed="true">All</button>
+      <button type="button" data-f="scene" aria-pressed="false">Dioramas</button>
+      <button type="button" data-f="terrain" aria-pressed="false">Terrain</button>
+      <button type="button" data-f="figure" aria-pressed="false">Figures</button>
+    </div>
+  </div>
+  <div class="masonry" id="grid"></div>
+  <div class="more"><a class="btn" href="index.html#inquire">Start a commission →</a></div>
+</div></section>
+
+<footer><div class="wrap"><span>ATXminis · Evan Lapka Miniature Modeling · Denver, Colorado</span><span><a href="gallery.html">Gallery</a> · <a href="https://www.instagram.com/atxminis/">Instagram</a> · <a href="https://www.facebook.com/atxminis">Facebook</a></span></div></footer>
+<dialog id="lb"><button type="button" id="lbx">Close ✕</button><img id="lbi" alt=""><p id="lbc"></p></dialog>
+
+<script>
+const works=[["spaceport-1", "Desert spaceport \u00b7 overview", "scene"], ["spaceport-5", "Desert spaceport \u00b7 full table", "terrain"], ["dragon", "Dragon's hoard", "scene"], ["arena", "The arena", "scene"], ["street", "Neon street", "scene"], ["spaceport-2", "Desert spaceport \u00b7 hangar", "terrain"], ["warband", "Warband display", "scene"], ["mushroom", "Fungal sprite", "figure"], ["blue-dragon", "Cathedral encounter", "scene"], ["gunslinger", "Gunslinger", "figure"], ["throne", "The throne room", "scene"], ["statues", "The statue garden", "scene"], ["pumpkin", "Hollow's Eve", "scene"], ["champion", "Chaos champion", "figure"], ["spaceport-3", "Desert spaceport \u00b7 speeder", "terrain"], ["dwarf", "Dwarf warrior", "figure"], ["arena-2", "The arena \u00b7 victor", "scene"], ["dragon-detail", "Dragon's hoard \u00b7 detail", "scene"], ["hunter", "Bounty hunter", "figure"], ["duelist", "Duelist", "figure"], ["spaceport-4", "Desert spaceport \u00b7 crew", "terrain"], ["squad", "Strike squad", "figure"], ["corridor", "Corridor ambush", "scene"], ["general", "Four-blade general", "figure"], ["warlord", "Warlord", "figure"], ["pumpkin-2", "Hollow's Eve \u00b7 detail", "scene"], ["tank", "Hover tank", "figure"], ["beast", "Beastman warlord", "figure"], ["undead-knight", "Undead knight", "figure"], ["minotaur", "Minotaur", "figure"], ["trooper", "Ruin ambush", "scene"], ["knight", "Knight on plinth", "figure"], ["marine", "Heavy gunner", "figure"], ["marine-2", "Heavy gunner \u00b7 profile", "figure"], ["dark-lord", "Dark lord", "figure"], ["flyer", "Scrap flyer", "figure"]];
+const label={scene:"Diorama",terrain:"Terrain",figure:"Figure"};
+const grid=document.getElementById("grid");
+grid.innerHTML=works.map(([f,t,c])=>`<button class="work" data-cat="${c}" data-src="img/${f}.jpg" data-cap="${t}"><div class="ph"><img src="img/${f}.jpg" alt="${t}" loading="lazy"></div><div class="meta"><h3>${t}</h3><span class="cat">${label[c]}</span></div></button>`).join("");
+document.querySelectorAll(".filters button").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll(".filters button").forEach(x=>x.setAttribute("aria-pressed",x===b));
+  const f=b.dataset.f; grid.querySelectorAll(".work").forEach(w=>w.hidden=!(f==="all"||w.dataset.cat===f));
+}));
+const lb=document.getElementById("lb");
+document.addEventListener("click",e=>{const t=e.target.closest("[data-src]"); if(!t) return;
+  const i=document.getElementById("lbi"); i.src=t.dataset.src; i.alt=t.dataset.cap; document.getElementById("lbc").textContent=t.dataset.cap;
+  try{lb.showModal()}catch{lb.setAttribute("open","")}});
+document.getElementById("lbx").onclick=()=>lb.close();
+lb.addEventListener("click",e=>{if(e.target===lb) lb.close()});
+</script>
+</body>
+</html>

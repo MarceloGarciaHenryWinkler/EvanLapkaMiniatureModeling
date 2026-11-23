@@ -4,170 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ATXminis | Evan Lapka Miniature Modeling | Denver, CO</title>
-<meta name="description" content="ATXminis: Evan Lapka Miniature Modeling. Display miniatures, dioramas and terrain by commission, plus classes and virtual coaching. Denver, Colorado.">
+<meta name="description" content="ATXminis: Evan Lapka Miniature Modeling. Display dioramas, large-scale terrain and display figures by commission, plus classes and virtual coaching. Denver, Colorado.">
 <meta property="og:title" content="ATXminis | Evan Lapka Miniature Modeling">
-<meta property="og:description" content="ATXminis: Evan Lapka Miniature Modeling. Display miniatures, dioramas and terrain by commission, plus classes and virtual coaching. Denver, Colorado.">
+<meta property="og:description" content="ATXminis: Evan Lapka Miniature Modeling. Display dioramas, large-scale terrain and display figures by commission, plus classes and virtual coaching. Denver, Colorado.">
 <meta property="og:image" content="https://atxminis.com/img/hero.jpg">
-<meta property="og:type" content="website">
 <link rel="canonical" href="https://atxminis.com/">
+<meta property="og:type" content="website">
+<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>
-/* Layout: dark gallery wall. Full-bleed hero, quiet text, photographs carry the page. Brass accent = metallic paint. */
-:root{
-  --wall:#141312;        /* gallery wall, warm graphite */
-  --plinth:#1d1b19;      /* raised surfaces */
-  --line:#34302b;
-  --ink:#ece6dc;         /* primary text */
-  --dim:#a39a8d;         /* secondary text */
-  --brass:#c9a25e;       /* accent */
-  --f-display:"Instrument Serif", "Iowan Old Style", Georgia, serif;
-  --f-body:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --f-mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
-  color-scheme:dark;
-}
-*{box-sizing:border-box}
-body{background:var(--wall);color:var(--ink);font:400 16px/1.65 var(--f-body);-webkit-font-smoothing:antialiased}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
-.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.eyebrow{font:500 11px/1 var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--brass)}
-h1,h2,h3{font-family:var(--f-display);font-weight:400;text-wrap:balance;margin:0}
-h2{font-size:clamp(34px,5vw,56px);line-height:1.05}
-h3{font-size:26px;line-height:1.15}
-p{margin:0;max-width:62ch}
-.draftnote{background:var(--brass);color:#1a1612;font:500 12px/1.4 var(--f-mono);text-align:center;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-
-/* nav */
-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:22px;flex-wrap:wrap}
-.mark{font-family:var(--f-display);font-size:26px;letter-spacing:.01em;text-decoration:none}
-.mark i{color:var(--dim);font-size:18px}
-nav ul{display:flex;gap:clamp(14px,3vw,32px);list-style:none;margin:0;padding:0;font-size:14px;flex-wrap:wrap}
-nav a{text-decoration:none;color:var(--dim)} nav a:hover{color:var(--ink)}
-nav .cta{color:var(--brass)}
-
-/* hero */
-.hero{position:relative}
-.hero img{display:block;width:100%;aspect-ratio:16/8;object-fit:cover;max-height:78vh}
-.hero-cap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px;align-items:end;padding-block:48px 72px}
-.hero-cap h1{font-size:clamp(44px,7.4vw,96px);line-height:.95;letter-spacing:-.01em}
-.hero-cap h1 em{color:var(--brass)}
-.hero-cap p{color:var(--dim);font-size:17px}
-.btn{display:inline-flex;align-items:center;gap:10px;margin-top:22px;padding:13px 22px;border:1px solid var(--brass);color:var(--ink);text-decoration:none;font:500 14px var(--f-body);letter-spacing:.02em;background:transparent;cursor:pointer}
-.btn:hover{background:var(--brass);color:var(--wall)}
-
-/* credentials */
-.creds{border-block:1px solid var(--line)}
-.creds ul{display:flex;flex-wrap:wrap;gap:12px 40px;list-style:none;margin:0;padding:22px 0;font:400 13px var(--f-mono);color:var(--dim);letter-spacing:.04em}
-.creds b{color:var(--ink);font-weight:500}
-
-section{padding-block:96px}
-.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
-.sec-head > div:first-child{display:grid;gap:14px}
-
-/* filters */
-.filters{display:flex;gap:6px;flex-wrap:wrap}
-.filters button{background:none;border:1px solid var(--line);color:var(--dim);font:500 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:9px 14px;cursor:pointer}
-.filters button[aria-pressed="true"]{border-color:var(--brass);color:var(--ink)}
-
-/* gallery */
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 20px}
-.work{display:grid;gap:12px;cursor:zoom-in;background:none;border:0;padding:0;text-align:left;color:inherit;font:inherit}
-.work .ph{overflow:hidden;background:var(--plinth);aspect-ratio:4/5}
-.work img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
-.work:hover img{transform:scale(1.035)}
-.work .meta{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
-.work h3{font-size:21px}
-.work .cat{font:400 11px var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--dim);white-space:nowrap}
-
-/* feature */
-.feature{background:var(--plinth)}
-.feature-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin-top:40px}
-.feature-grid button{padding:0;border:0;background:none;cursor:zoom-in;overflow:hidden}
-.feature-grid img{width:100%;height:100%;object-fit:cover;display:block}
-.fg-a{grid-column:span 4;grid-row:span 2}
-.fg-b,.fg-c{grid-column:span 2}
-.fg-d,.fg-e{grid-column:span 3}
-.feature-text{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:48px;align-items:start}
-.specs{display:grid;grid-template-columns:auto 1fr;gap:10px 24px;font:400 13px var(--f-mono);border-top:1px solid var(--line);padding-top:18px;margin:0}
-.specs dt{color:var(--dim);letter-spacing:.08em;text-transform:uppercase;font-size:11px;padding-top:2px}
-.specs dd{margin:0}
-.tbd{color:var(--brass)}
-
-/* commissions */
-.offer{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-bottom:72px}
-.offer article{border-top:1px solid var(--brass);padding-top:20px;display:grid;gap:10px;align-content:start}
-.offer p{color:var(--dim);font-size:15px}
-.offer .from{font:500 13px var(--f-mono);color:var(--ink);margin-top:6px}
-.terms{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;list-style:none;margin:0 0 56px;padding:22px 0;border-block:1px solid var(--line)}
-.terms li{display:grid;gap:4px;color:var(--dim);font-size:14px}
-.terms b{font-family:var(--f-display);font-weight:400;font-size:22px;color:var(--ink)}
-@media (max-width:900px){.terms{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;list-style:none;margin:0;padding:0;counter-reset:s}
-.steps li{counter-increment:s;display:grid;gap:8px;align-content:start}
-.steps li::before{content:counter(s,decimal-leading-zero);font:500 12px var(--f-mono);color:var(--brass)}
-.steps b{font-weight:600}
-.steps span{color:var(--dim);font-size:15px}
-
-/* about */
-.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
-.about img{width:100%;display:block}
-.about .body{display:grid;gap:18px}
-.about .body p{color:var(--dim)}
-.about .body p:first-of-type{color:var(--ink);font-family:var(--f-display);font-size:28px;line-height:1.25}
-
-/* form */
-.inquire{border-top:1px solid var(--line)}
-.inq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px}
-form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.f{display:grid;gap:7px;min-width:0}
-.f.full{grid-column:1/-1}
-label{font:500 11px var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
-input,select,textarea{width:100%;background:var(--plinth);border:1px solid var(--line);color:var(--ink);font:400 15px var(--f-body);padding:12px 14px;border-radius:0}
-textarea{min-height:120px;resize:vertical}
-input:focus,select:focus,textarea:focus{border-color:var(--brass);outline:none}
-.formmsg{grid-column:1/-1;font:400 13px var(--f-mono);color:var(--brass)}
-.contact-alt{color:var(--dim);font-size:15px;display:grid;gap:10px;margin-top:22px}
-.contact-alt code{font:400 14px var(--f-mono);color:var(--ink);user-select:all}
-
-footer{border-top:1px solid var(--line);padding-block:32px;font:400 12px var(--f-mono);color:var(--dim);letter-spacing:.04em}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-
-/* lightbox */
-dialog{border:0;padding:0;background:transparent;max-width:min(94vw,1600px);max-height:92vh}
-dialog::backdrop{background:rgba(10,9,8,.94)}
-dialog img{display:block;max-width:100%;max-height:86vh;margin:0 auto}
-dialog p{color:var(--dim);font:400 13px var(--f-mono);text-align:center;padding-top:12px;max-width:none}
-dialog button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px));background:none;border:1px solid var(--line);color:var(--ink);font:500 12px var(--f-mono);padding:8px 12px;cursor:pointer}
-
-@media (max-width:900px){
-  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .hero-cap,.feature-text,.about,.inq-grid{grid-template-columns:minmax(0,1fr);gap:28px}
-  .offer{grid-template-columns:minmax(0,1fr)}
-  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
-  section{padding-block:64px}
-}
-@media (max-width:520px){
-  .grid{grid-template-columns:minmax(0,1fr)}
-  form{grid-template-columns:minmax(0,1fr)}
-  .steps{grid-template-columns:minmax(0,1fr)}
-  .feature-grid{grid-template-columns:minmax(0,1fr)}
-  .fg-a,.fg-b,.fg-c,.fg-d,.fg-e{grid-column:auto;grid-row:auto}
-  .hero img{aspect-ratio:4/3}
-}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
-</style>
+<link rel="stylesheet" href="styles.css">
 <style>body{margin:0} img{max-width:100%} [hidden]{display:none!important}</style>
 </head>
 <body>
-
-
-
 <div class="wrap">
   <nav>
-    <a class="mark" href="#top">ATXminis <i>Evan Lapka Miniature Modeling</i></a>
+    <a class="mark" href="index.html">ATXminis <i>Evan Lapka Miniature Modeling</i></a>
     <ul>
-      <li><a href="#work">Work</a></li>
+      <li><a href="#scenes">Dioramas</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
       <li><a href="#commissions">Commissions</a></li>
       <li><a href="#teaching">Classes &amp; coaching</a></li>
       <li><a href="#about">About</a></li>
@@ -177,11 +32,11 @@ dialog button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right
 </div>
 
 <header class="hero" id="top">
-  <img src="img/hero.jpg" alt="Desert spaceport diorama: a domed hangar with red-painted interior, weathered stucco buildings and painted crew figures" width="2400" height="1351">
+  <img src="img/hero.jpg" alt="Desert spaceport diorama: a domed hangar with a red-painted interior, weathered stucco buildings and painted crew figures" width="2400" height="1243">
   <div class="wrap hero-cap">
-    <h1>Miniatures built to be <em>looked at</em>, not played with.</h1>
+    <h1>Whole worlds, <em>built by hand</em> at miniature scale.</h1>
     <div>
-      <p>Display figures, dioramas and terrain, painted and built by hand in my Denver studio. I take commissions case by case, and I teach classes and one-on-one virtual coaching.</p>
+      <p>Dioramas, large-scale display terrain and display figures, painted and built in my Denver studio. I take commissions case by case, and I teach classes and one-on-one virtual coaching.</p>
       <a class="btn" href="#inquire">Start a conversation →</a>
     </div>
   </div>
@@ -195,19 +50,6 @@ dialog button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right
   <li>ReaperCon MSP Open · 2021</li>
   <li>East Austin Studio Tour · 2021, 2022</li>
 </ul></div></div>
-
-<section id="work"><div class="wrap">
-  <div class="sec-head">
-    <div><span class="eyebrow">Selected work</span><h2>Recent pieces</h2></div>
-    <div class="filters" role="group" aria-label="Filter work">
-      <button type="button" data-f="all" aria-pressed="true">All</button>
-      <button type="button" data-f="figure" aria-pressed="false">Display figures</button>
-      <button type="button" data-f="diorama" aria-pressed="false">Dioramas</button>
-      <button type="button" data-f="terrain" aria-pressed="false">Terrain</button>
-    </div>
-  </div>
-  <div class="grid" id="grid"></div>
-</div></section>
 
 <section class="feature" id="feature"><div class="wrap">
   <div class="feature-text">
@@ -224,14 +66,45 @@ dialog button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right
   </div>
   <div class="feature-grid">
     <button class="fg-a" data-src="img/spaceport-1.jpg" data-cap="Desert spaceport · overview"><img src="img/spaceport-1.jpg" alt="Spaceport diorama overview" loading="lazy"></button>
-    <button class="fg-b" data-src="img/spaceport-2.jpg" data-cap="Desert spaceport · hangar entrance"><img src="img/spaceport-2.jpg" alt="Hangar entrance detail" loading="lazy"></button>
-    <button class="fg-c" data-src="img/spaceport-4.jpg" data-cap="Desert spaceport · crew detail"><img src="img/spaceport-4.jpg" alt="Crew figures inside the hangar" loading="lazy"></button>
-    <button class="fg-d" data-src="img/spaceport-3.jpg" data-cap="Desert spaceport · speeder and storefront"><img src="img/spaceport-3.jpg" alt="Speeder bike in front of a storefront" loading="lazy"></button>
+    <button class="fg-b" data-src="img/spaceport-2.jpg" data-cap="Desert spaceport · hangar entrance"><img src="img/spaceport-2.jpg" alt="Hangar entrance" loading="lazy"></button>
+    <button class="fg-c" data-src="img/spaceport-4.jpg" data-cap="Desert spaceport · crew"><img src="img/spaceport-4.jpg" alt="Crew figures inside the hangar" loading="lazy"></button>
+    <button class="fg-d" data-src="img/spaceport-3.jpg" data-cap="Desert spaceport · speeder"><img src="img/spaceport-3.jpg" alt="Speeder bike in front of a storefront" loading="lazy"></button>
     <button class="fg-e" data-src="img/spaceport-5.jpg" data-cap="Desert spaceport · full table"><img src="img/spaceport-5.jpg" alt="Full spaceport table" loading="lazy"></button>
   </div>
 </div></section>
 
-<section id="commissions"><div class="wrap">
+<section id="scenes"><div class="wrap">
+  <div class="sec-head"><div><span class="eyebrow">Dioramas &amp; display scenes</span><h2>Large-scale work</h2></div></div>
+  <div class="scenes">
+    <article class="scene">
+      <button class="scene-img" data-src="img/dragon.jpg" data-cap="Dragon's hoard"><img src="img/dragon.jpg" alt="Dragon's hoard" loading="lazy"></button>
+      <div class="scene-txt"><span class="eyebrow">Diorama</span><h3>Dragon's hoard</h3><p>A towering dragon coiled over a rocky outcrop, faced down by a full adventuring party. Built as one display, with every figure painted to the same standard as the centerpiece.</p></div>
+    </article>
+    <article class="scene">
+      <button class="scene-img" data-src="img/arena.jpg" data-cap="The arena"><img src="img/arena.jpg" alt="The arena" loading="lazy"></button>
+      <div class="scene-txt"><span class="eyebrow">Diorama</span><h3>The arena</h3><p>Gladiators on a sculpted, blood-spattered arena base. Each fighter sits in a recessed plinth, so the scene reads as a single moment.</p></div>
+    </article>
+    <article class="scene">
+      <button class="scene-img" data-src="img/street.jpg" data-cap="Neon street"><img src="img/street.jpg" alt="Neon street" loading="lazy"></button>
+      <div class="scene-txt"><span class="eyebrow">Diorama</span><h3>Neon street</h3><p>A storefront, its sign lit up, and a street-level standoff, lit in cold blue to sell the night.</p></div>
+    </article>
+    <article class="scene">
+      <button class="scene-img" data-src="img/warband.jpg" data-cap="Warband display"><img src="img/warband.jpg" alt="Warband display" loading="lazy"></button>
+      <div class="scene-txt"><span class="eyebrow">Diorama</span><h3>Warband display</h3><p>A full warband arranged around a raised centerpiece, painted as a cohesive set for the shelf.</p></div>
+    </article>
+    <article class="scene">
+      <button class="scene-img" data-src="img/blue-dragon.jpg" data-cap="Cathedral encounter"><img src="img/blue-dragon.jpg" alt="Cathedral encounter" loading="lazy"></button>
+      <div class="scene-txt"><span class="eyebrow">Diorama</span><h3>Cathedral encounter</h3><p>A blue dragon and its challengers framed by a gothic archway backdrop.</p></div>
+    </article>
+    <article class="scene">
+      <button class="scene-img" data-src="img/statues.jpg" data-cap="The statue garden"><img src="img/statues.jpg" alt="The statue garden" loading="lazy"></button>
+      <div class="scene-txt"><span class="eyebrow">Diorama</span><h3>The statue garden</h3><p>Painted statuary and figures set against carved stone walls overgrown with moss.</p></div>
+    </article>
+  </div>
+  <div class="more"><a class="btn" href="gallery.html">See the full gallery →</a></div>
+</div></section>
+
+<section class="feature" id="commissions"><div class="wrap">
   <div class="sec-head"><div><span class="eyebrow">Commissions</span><h2>What I take on</h2></div></div>
   <ul class="terms">
     <li><b>Display work only</b>No tabletop armies</li>
@@ -240,9 +113,9 @@ dialog button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right
     <li><b>2–3 month lead time</b>From deposit to delivery</li>
   </ul>
   <div class="offer">
-    <article><h3>Display figures</h3><p>Single figures and busts painted for the shelf, not the tabletop. Freehand, metallics and sculpted or scenic bases on a plinth.</p></article>
-    <article><h3>Dioramas &amp; vignettes</h3><p>A scene built around a moment: one figure on a vignette base, or a full narrative piece with several figures and scratch-built elements.</p></article>
-    <article><h3>Display terrain</h3><p>Boards and terrain sets painted as a whole, from a single building to a complete table, built to be photographed and displayed.</p></article>
+    <article><h3>Dioramas &amp; scenes</h3><p>A scene built around a moment: one figure on a vignette base, or a full narrative piece with several figures and scratch-built elements.</p></article>
+    <article><h3>Large-scale display terrain</h3><p>Boards and terrain sets painted as a whole, from a single building to a complete table, built to be photographed and displayed.</p></article>
+    <article><h3>Display figures</h3><p>Single figures and centerpieces painted for the shelf, not the tabletop, finished on a plinth.</p></article>
   </div>
   <ol class="steps">
     <li><b>Inquiry</b><span>Tell me the subject, scale, references and when you'd like it.</span></li>
@@ -252,7 +125,7 @@ dialog button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right
   </ol>
 </div></section>
 
-<section class="feature" id="teaching"><div class="wrap">
+<section id="teaching"><div class="wrap">
   <div class="sec-head"><div><span class="eyebrow">Classes &amp; coaching</span><h2>Learn at the bench</h2></div></div>
   <div class="offer" style="margin-bottom:0">
     <article><h3>Classes</h3><p>Small-group painting and terrain classes for shops, clubs and events. Topics range from display basing and weathering to building a diorama from scratch.</p></article>
@@ -261,12 +134,12 @@ dialog button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right
   </div>
 </div></section>
 
-<section id="about"><div class="wrap about">
-  <img src="img/dragon.jpg" alt="Purple dragon on a rock outcrop surrounded by a painted adventuring party" loading="lazy">
+<section id="about" style="padding-top:0"><div class="wrap about">
+  <img src="img/dragon-detail.jpg" alt="Close-up of a dragon's head with metallic scales" loading="lazy">
   <div class="body">
     <span class="eyebrow">About</span>
     <p>I'm Evan Lapka, a miniature artist working in Denver, Colorado.</p>
-    <p>I started ATXminis in Austin, and spent years as a studio artist for Imperial Terrain, TurboDork and CRAFT, painting, building terrain and designing dioramas for production and Kickstarter campaigns. Now I take on a small number of private commissions, focused on display pieces, dioramas and single figures.</p>
+    <p>I started ATXminis in Austin, and spent years as a studio artist for Imperial Terrain, TurboDork and CRAFT, painting, building terrain and designing dioramas for production and Kickstarter campaigns. Now I take on a small number of private commissions, focused on dioramas, large-scale display terrain and single figures.</p>
     <p>Featured in <a href="https://voyageaustin.com/interview/conversations-with-evan-lapka/">Voyage Austin</a>. More work on <a href="https://www.instagram.com/atxminis/">Instagram @atxminis</a>.</p>
   </div>
 </div></section>
@@ -282,7 +155,7 @@ dialog button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right
     <div class="f"><label for="n">Name</label><input id="n" name="name" autocomplete="name" required></div>
     <div class="f"><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email" required></div>
     <div class="f"><label for="t">I'm asking about</label><select id="t" name="subject"><option>A commission</option><option>A class or workshop</option><option>Virtual coaching</option><option>Something else</option></select></div>
-    <div class="f"><label for="s">Scale or size (if known)</label><input id="s" name="scale" placeholder="e.g. 54mm figure, 2×2 ft board"></div>
+    <div class="f"><label for="s">Scale or size (if known)</label><input id="s" name="scale" placeholder="e.g. 2×2 ft diorama, 54mm figure"></div>
     <div class="f full"><label for="c">Details</label><textarea id="c" name="message" required placeholder="The subject, the mood, where it will be displayed…"></textarea></div>
     <div class="f full"><label for="r">Reference links</label><input id="r" name="refs" placeholder="Instagram, Pinterest, concept art"></div>
     <div class="f"><label for="d">Timeline</label><input id="d" name="timeline" placeholder="Flexible, or a date"></div>
@@ -293,29 +166,13 @@ dialog button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right
   </form>
 </div></section>
 
-<footer><div class="wrap"><span>ATXminis · Evan Lapka · Denver, Colorado</span><span><a href="https://www.instagram.com/atxminis/">Instagram</a> · <a href="https://www.facebook.com/atxminis">Facebook</a></span></div></footer>
-
+<footer><div class="wrap"><span>ATXminis · Evan Lapka Miniature Modeling · Denver, Colorado</span><span><a href="gallery.html">Gallery</a> · <a href="https://www.instagram.com/atxminis/">Instagram</a> · <a href="https://www.facebook.com/atxminis">Facebook</a></span></div></footer>
 <dialog id="lb"><button type="button" id="lbx">Close ✕</button><img id="lbi" alt=""><p id="lbc"></p></dialog>
 
 <script>
-const works=[
- ["gunslinger","Gunslinger","figure"],["mushroom","Fungal sprite","figure"],["champion","Chaos champion","figure"],
- ["arena","Gladiator arena","diorama"],["dwarf","Dwarf warrior on plinth","figure"],["pumpkin","Hollow's Eve","diorama"],
- ["hunter","Bounty hunter","figure"],["throne","The throne room","diorama"],["street","Neon street corner","diorama"],
- ["duelist","Duelist","figure"],["general","Four-blade general","figure"],["spaceport-2","Desert spaceport","terrain"],
- ["beast","Beastman warlord","figure"],["tank","Hover tank","figure"],["trooper","Ruin ambush","diorama"],
- ["marine","Heavy gunner","figure"],["flyer","Scrap flyer","figure"],["dragon-detail","Dragon, detail","diorama"]
-];
-const label={figure:"Display figure",diorama:"Diorama",terrain:"Terrain"};
-const grid=document.getElementById("grid");
-grid.innerHTML=works.map(([f,t,c])=>`<button class="work" data-cat="${c}" data-src="img/${f}.jpg" data-cap="${t}"><div class="ph"><img src="img/${f}.jpg" alt="${t}" loading="lazy"></div><div class="meta"><h3>${t}</h3><span class="cat">${label[c]}</span></div></button>`).join("");
-document.querySelectorAll(".filters button").forEach(b=>b.addEventListener("click",()=>{
-  document.querySelectorAll(".filters button").forEach(x=>x.setAttribute("aria-pressed",x===b));
-  const f=b.dataset.f; grid.querySelectorAll(".work").forEach(w=>w.hidden=!(f==="all"||w.dataset.cat===f));
-}));
 const lb=document.getElementById("lb");
 document.addEventListener("click",e=>{const t=e.target.closest("[data-src]"); if(!t) return;
-  document.getElementById("lbi").src=t.dataset.src; document.getElementById("lbi").alt=t.dataset.cap; document.getElementById("lbc").textContent=t.dataset.cap;
+  const i=document.getElementById("lbi"); i.src=t.dataset.src; i.alt=t.dataset.cap; document.getElementById("lbc").textContent=t.dataset.cap;
   try{lb.showModal()}catch{lb.setAttribute("open","")}});
 document.getElementById("lbx").onclick=()=>lb.close();
 lb.addEventListener("click",e=>{if(e.target===lb) lb.close()});
@@ -327,6 +184,5 @@ form.addEventListener("submit",async e=>{e.preventDefault();
     if(!r.ok) throw 0; form.reset(); say("Thanks. Your message is in, and I'll reply by email.");}
   catch{say("That didn't send. Please email atxminis@gmail.com instead.")}});
 </script>
-
 </body>
 </html>
