@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gallery | ATXminis</title>
+<meta name="description" content="ATXminis: Evan Lapka Miniature Modeling. Display dioramas, large-scale terrain and display figures by commission, plus classes and virtual coaching. Denver, Colorado.">
+<meta property="og:title" content="ATXminis | Evan Lapka Miniature Modeling">
+<meta property="og:description" content="ATXminis: Evan Lapka Miniature Modeling. Display dioramas, large-scale terrain and display figures by commission, plus classes and virtual coaching. Denver, Colorado.">
+<meta property="og:image" content="https://atxminis.com/img/hero-cantina.jpg">
+<meta property="og:type" content="website">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>body{margin:0} img{max-width:100%} [hidden]{display:none!important}</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="mark" href="index.html">ATXminis <i>Evan Lapka Miniature Modeling</i></a>
+    <ul>
+      <li><a href="index.html#scenes">Dioramas</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="index.html#commissions">Commissions</a></li>
+      <li><a href="index.html#teaching">Classes &amp; coaching</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a class="cta" href="index.html#inquire">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="wrap page-head">
+  <span class="eyebrow">Gallery</span>
+  <h1>The full collection</h1>
+  <p>Dioramas, display terrain and figures from the studio. Click a piece to step through every photo of it.</p>
+</div>
+
+<section style="padding-top:40px"><div class="wrap">
+  <div class="sec-head" style="margin-bottom:28px"><div></div>
+    <div class="filters" role="group" aria-label="Filter work">
+      <button type="button" data-f="all" aria-pressed="true">All</button>
+      <button type="button" data-f="scene" aria-pressed="false">Dioramas</button>
+      <button type="button" data-f="terrain" aria-pressed="false">Terrain</button>
+      <button type="button" data-f="figure" aria-pressed="false">Figures</button>
+      <button type="button" data-f="art" aria-pressed="false">Card art</button>
+    </div>
+  </div>
+  <div class="masonry" id="grid"></div>
+  <div class="more"><a class="btn" href="index.html#inquire">Start a commission →</a></div>
+</div></section>
+
+<footer><div class="wrap"><span>ATXminis · Evan Lapka Miniature Modeling · Denver, Colorado</span><span><a href="gallery.html">Gallery</a> · <a href="https://www.instagram.com/atxminis/">Instagram</a> · <a href="https://www.facebook.com/atxminis">Facebook</a></span></div></footer>
+<dialog id="lb"><button type="button" id="lbx">Close ✕</button><button type="button" class="lbnav" id="lbp" aria-label="Previous photo">‹</button><button type="button" class="lbnav" id="lbn" aria-label="Next photo">›</button><img id="lbi" alt=""><p id="lbc"></p></dialog>
+
+<script>
+const groups=[["The shanty stack", "scene", ["shanty-spire", "shanty-lineup", "shanty-hovercar", "shanty-bar", "shanty-bar-2", "shanty-skiff", "shanty-skiff-3", "shanty-gunship", "shanty-skiff-2", "shanty-crane", "shanty-stack", "shanty-tower"]], ["No man's land", "scene", ["graveyard-trench", "graveyard-trench-2", "graveyard-trench-3", "graveyard-trench-4"]], ["Smuggler crew", "figure", ["smuggler-crew", "smuggler-crew-2"]], ["Starship fleet", "figure", ["star-fleet"]], ["Azure blade", "figure", ["azure-blade"]], ["Two-headed ogre", "figure", ["ogre", "ogre-3", "ogre-2"]], ["Frost-world strike squad", "figure", ["frost-squad", "frost-captain", "frost-captain-2"]], ["Scrap fighter-bomber", "figure", ["scrap-bomber-hd", "scrap-bomber-hd-2", "scrap-bomber-hd-3", "scrap-bomber-2", "scrap-bomber"]], ["Desert spaceport", "terrain", ["spaceport-1", "spaceport-5", "spaceport-2", "spaceport-3", "spaceport-4", "spaceport-alt"]], ["Speeder chase", "scene", ["speeder-chase", "speeder-bike", "speeder-bike-2"]], ["The cantina", "scene", ["cantina-bar", "cantina-gate", "cantina", "cantina-arch", "cantina-crew", "cantina-yard", "cantina-door"]], ["Dragon's hoard", "scene", ["dragon", "dragon-detail"]], ["Painted-world vignettes", "scene", ["vampire-vignette", "sorcerer-vignette", "dryad-vignette"]], ["Street battle", "scene", ["street-battle", "street-battle-2"]], ["Neon block wall modules", "terrain", ["wall-modules", "wall-module-shrine", "wall-module-tower", "wall-module-bay"]], ["Gothic ruins & spike barricades", "terrain", ["gothic-ruins"]], ["Winged stalkers", "figure", ["winged-stalkers"]], ["Serpent-winged flock", "figure", ["serpent-flock"]], ["Greenskin horde", "figure", ["greenskin-horde"]], ["The ruined city", "terrain", ["ruined-city-3", "ruined-city", "ruined-city-2"]], ["Urban ruins table", "terrain", ["urban-board", "urban-board-2", "urban-board-3", "city-board", "ruins-ambush", "ruin-patrol", "landing-zone"]], ["Neon street", "scene", ["street"]], ["Neon alley", "scene", ["neon-alley"]], ["Armored company", "figure", ["armored-company", "armored-company-2", "battle-tank"]], ["The statue garden", "scene", ["statues"]], ["Cathedral encounter", "scene", ["blue-dragon"]], ["The throne room", "scene", ["throne"]], ["Corridor ambush", "scene", ["corridor"]], ["Industrial yard", "terrain", ["industrial-yard"]], ["Street fight", "scene", ["street-fight"]], ["Ruin ambush", "scene", ["trooper"]], ["The arena", "scene", ["arena", "arena-2"]], ["Fungal sprite", "figure", ["mushroom"]], ["Warband display", "scene", ["warband"]], ["Warband in the ruins", "scene", ["ruins-warband"]], ["Hollow's Eve", "scene", ["pumpkin", "pumpkin-2"]], ["Gunslinger", "figure", ["gunslinger"]], ["Chaos champion", "figure", ["champion"]], ["Dwarf warrior", "figure", ["dwarf"]], ["Bounty hunter", "figure", ["hunter"]], ["Duelist", "figure", ["duelist"]], ["Strike squads", "figure", ["squad", "strike-squad-2", "trooper-squad", "jetpack-squad"]], ["Walker", "scene", ["walker"]], ["Desert trooper squad", "figure", ["desert-troopers"]], ["Starship corridor board", "terrain", ["corridor-board"]], ["Neon street boss", "figure", ["neon-boss"]], ["Ghillie strike force", "scene", ["ghillie-squad"]], ["Urban patrol", "scene", ["urban-patrol", "urban-patrol-2"]], ["Bug hunt", "scene", ["bug-hunt"]], ["Neon loiterer", "figure", ["neon-loiterer"]], ["Violet lord", "figure", ["violet-lord"]], ["Dragon collection", "figure", ["dragon-hoard-shelf", "dragon-shelf-2", "dragon-shelf-3"]], ["Hand-painted card alters", "art", ["card-tower", "card-mortality", "card-desert"]], ["Arena warbands", "scene", ["arena-warbands", "arena-warbands-6", "arena-warbands-7", "arena-warbands-2", "arena-warbands-3", "arena-warbands-4", "arena-warbands-5"]], ["Chaos warband", "figure", ["chaos-warband"]], ["Ruin standoff", "scene", ["ruin-standoff-2", "ruin-standoff"]], ["Reactor bay", "terrain", ["reactor-bay"]], ["Outpost building", "terrain", ["outpost-building"]], ["Lizard-back lord", "figure", ["lizard-lord"]], ["Skull-mask knight", "figure", ["skull-knight"]], ["Lion warrior", "figure", ["lion-warrior"]], ["Crimson blade", "figure", ["crimson-blade"]], ["The count", "figure", ["duelist-2"]], ["Desert lizard rider", "figure", ["beast-rider-2", "beast-rider-3", "beast-rider-4"]], ["Terminator pair", "figure", ["daemon-pair-hd", "daemon-pair"]], ["Strike gunship", "figure", ["gunship"]], ["Desert patrol truck", "scene", ["dumvee", "dumvee-2", "dumvee-3"]], ["Armored locomotive", "terrain", ["locomotive-city", "locomotive-hd", "locomotive-hd-2", "locomotive"]], ["Moon dryad", "figure", ["moon-dryad", "moon-dryad-2"]], ["Beast rider", "figure", ["beast-rider"]], ["Daemon host", "figure", ["purple-knight", "purple-host"]], ["Heavy gunner", "figure", ["marine", "marine-2"]], ["Knight on plinth", "figure", ["knight"]], ["Sorcerer & fire mage", "figure", ["sorcerer", "fire-mage"]], ["Scrap flyer", "figure", ["flyer"]], ["Hover tank", "figure", ["tank"]], ["Four-blade general", "figure", ["general"]], ["Warlord", "figure", ["warlord"]], ["Beastman warlord", "figure", ["beast"]], ["Minotaur", "figure", ["minotaur"]], ["Undead knight", "figure", ["undead-knight"]], ["Dark lord", "figure", ["dark-lord"]]];
+const tags={"Smuggler crew": "Star Wars: Legion", "Frost-world strike squad": "Warhammer 40,000 \u00b7 Space Wolves", "Scrap fighter-bomber": "Warhammer 40,000 \u00b7 Orks", "Desert spaceport": "Star Wars: Legion terrain", "Speeder chase": "Star Wars: Legion", "The cantina": "Star Wars: Legion", "Gothic ruins & spike barricades": "Warhammer 40,000 terrain", "Greenskin horde": "Warhammer 40,000 \u00b7 Orks", "Neon street": "Star Wars: Legion", "Armored company": "Warhammer 40,000 \u00b7 Imperial Fists", "Warband in the ruins": "Warhammer 40,000", "Bounty hunter": "Star Wars: Legion", "Duelist": "Star Wars: Legion", "Strike squads": "Warhammer 40,000 \u00b7 Space Wolves", "Walker": "Star Wars: Legion", "Desert trooper squad": "Star Wars: Legion", "The count": "Star Wars: Legion", "Desert lizard rider": "Star Wars: Legion", "Terminator pair": "Warhammer 40,000 \u00b7 Chaos Space Marines", "Strike gunship": "Warhammer 40,000 \u00b7 Imperial Fists", "Daemon host": "Warhammer 40,000 \u00b7 Chaos", "Heavy gunner": "Warhammer 40,000 \u00b7 Space Marines", "Knight on plinth": "Warhammer 40,000 \u00b7 Space Marines", "Scrap flyer": "Warhammer 40,000 \u00b7 Orks", "Four-blade general": "Star Wars: Legion", "Dark lord": "Star Wars: Legion"};
+const label={scene:"Diorama",terrain:"Terrain",figure:"Figure",art:"Card art"};
+const grid=document.getElementById("grid");
+const esc=x=>JSON.stringify(x).replace(/"/g,"&quot;");
+grid.innerHTML=groups.map(([t,c,imgs])=>`<button class="work" data-cat="${c}" data-set="${esc(imgs.map(f=>["img/"+f+".jpg",tags[t]?t+" · "+tags[t]:t]))}"><div class="ph"><img src="img/${imgs[0]}.jpg" alt="${t}" loading="lazy">${imgs.length>1?`<span class="count">${imgs.length} photos</span>`:""}</div><div class="meta"><h3>${t}${tags[t]?`<small class="sys">${tags[t]}</small>`:""}</h3><span class="cat">${label[c]}</span></div></button>`).join("");
+document.querySelectorAll(".filters button").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll(".filters button").forEach(x=>x.setAttribute("aria-pressed",x===b));
+  const f=b.dataset.f; grid.querySelectorAll(".work").forEach(w=>w.hidden=!(f==="all"||w.dataset.cat===f));
+}));
+const lb=document.getElementById("lb"),lbi=document.getElementById("lbi"),lbc=document.getElementById("lbc"),lbp=document.getElementById("lbp"),lbn=document.getElementById("lbn");
+let set=[],k=0;
+const show=()=>{const [src,cap]=set[k];lbi.src=src;lbi.alt=cap;lbc.textContent=set.length>1?`${cap} · ${k+1} / ${set.length}`:cap;lbp.hidden=lbn.hidden=set.length<2};
+document.addEventListener("click",e=>{const t=e.target.closest("[data-src],[data-set]"); if(!t||t.closest("dialog")) return;
+  set=t.dataset.set?JSON.parse(t.dataset.set):[[t.dataset.src,t.dataset.cap]]; k=+(t.dataset.i||0); show();
+  try{lb.showModal()}catch{lb.setAttribute("open","")}});
+lbp.onclick=()=>{k=(k-1+set.length)%set.length;show()}; lbn.onclick=()=>{k=(k+1)%set.length;show()};
+document.addEventListener("keydown",e=>{if(!lb.open)return; if(e.key==="ArrowLeft")lbp.click(); if(e.key==="ArrowRight")lbn.click()});
+document.getElementById("lbx").onclick=()=>lb.close();
+lb.addEventListener("click",e=>{if(e.target===lb) lb.close()});
+</script>
+</body>
+</html>
